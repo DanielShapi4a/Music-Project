@@ -4,20 +4,15 @@
   margin: 0;
   scroll-behavior: smooth;
 }
-
 body {
   background: var(--color-bg);
+  font-family: 'Arial', sans-serif; 
 }
-
 a{
   color: unset;
   text-decoration: none;
 }
-
-.BackGround {
-  background: radial-gradient(circle at 3% 25%, rgba(83, 79, 0, 1) 0%, rgba(130, 238, 210, 1) 100%);
-}
-.BackGround__text{
+.gradient__text{
   background: var(--gradient-text);
   background-clip: text;
   -webkit-background-clip: text;
@@ -35,6 +30,10 @@ a{
 	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
+.gradient__bg{
+  background: radial-gradient(circle at 3% 25%, rgba(0, 61, 127, 1) 0%, rgba(4, 12, 24, 1) 100%);
+}
+
 
  @-webkit-keyframes scale-up-center {
   0% {
