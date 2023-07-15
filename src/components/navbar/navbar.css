@@ -1,0 +1,119 @@
+.Music__navbar-links{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Music__navbar{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    width: 300px 3fr 1fr;
+    justify-content: space-between;
+    height: 58px;
+    margin-left: 200px;
+    margin-right: 200px;
+    color:#fff;
+}
+.Music__navbar-sections{
+    border-width: 5px;
+    border-color: solid;
+}
+.Nav-Section1, .Nav-Section2, .Nav-Section3{
+    justify-content: center;
+    flex: 1;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.Nav-Section1{
+    font-size: 36px;
+    font-family: var(--font-family);
+    color: #fff;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+.Nav-Section2{
+    display: flex;
+    flex-direction: row;
+}
+.Nav-Section2 p
+{
+    color: #fff;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+    margin: 0 1rem;
+    cursor: pointer;
+    flex-direction: row;
+}
+.Nav-Section3{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.Info{
+    margin-right: 10px;
+    color: grey;
+    font-size: 18px;
+}
+.NavBar-middle{
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.MusicLogo{
+    object-fit: cover;
+    background-color: transparent;
+    flex:1;
+    border-radius:20px;
+    height: 45px;
+    width: 45px;
+    margin-right: 10px;
+}
+.MusicLogo:hover{
+    background-color: rgb(122, 121, 121);
+    cursor: pointer;
+    border-radius: 2px;
+    
+    transition: 0.25s;
+}
+.Site-Logo:hover{
+    background-color: rgb(122, 121, 121);
+    cursor: pointer;
+    transition: 0.25s;
+}
+.Search:hover{
+    background-color: rgb(122, 121, 121);
+    cursor: pointer;
+    transition: 0.25s;
+}
+.NavBar-middle{
+    align-items: center;
+    display: flex;
+}
+.StartFreeTrial-button{
+    background-color: rgba(97, 0, 253, 0.874);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: box-shadow 0.15s, color 0.15s;
+    vertical-align: top;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.StartFreeTrial-button:hover{
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+}
+

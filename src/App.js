@@ -8,7 +8,6 @@ import {CTA,Brand,Navbar} from './components';
 function App() {
   return (
     <div className="App">
-      Hello music project 
       <div className='BackGround'>
         <Navbar/>
         <Header/>
