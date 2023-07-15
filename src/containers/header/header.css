@@ -1,0 +1,65 @@
+.Main-Header{
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    color: #fff;
+    padding: 64px;
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 6rem;
+    text-align: center;
+}
+.Main-Header p {
+    font-size: 33px;
+    color: #fff;
+    line-height: 2rem;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.button-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex:1;
+    justify-content: center;
+  }
+  .ReadMore{
+    text-align: center;
+    margin-left: 30px;
+    background-color: rgb(54, 52, 52);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: box-shadow 0.15s, color 0.15s;
+    vertical-align: top;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: inline-block;
+    height: 50px;
+  } 
+
+  .main-text{
+    margin-bottom: 300px;
+  }
+  p.Currently{
+    font-size: 70px;
+    color: #fff;
+    line-height: 5rem;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+  }
+  div.Panorama p.ChangingText {
+    font-weight: bold;
+    font-size: 50px;
+    color: rgb(97, 0, 253);
+  }
+ 

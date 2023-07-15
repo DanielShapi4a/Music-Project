@@ -11,9 +11,8 @@
     align-items: center;
     width: 300px 3fr 1fr;
     justify-content: space-between;
-    height: 58px;
-    margin-left: 200px;
-    margin-right: 200px;
+    height: 75px;
+   
     color:#fff;
 }
 .Music__navbar-sections{
@@ -112,6 +111,8 @@
     padding-bottom: 9px;
     padding-left: 16px;
     padding-right: 16px;
+    display: inline-block;
+    height: 50px;
 }
 .StartFreeTrial-button:hover{
     box-shadow: 5px 5px 10px rgba(0,0,0,0.15);

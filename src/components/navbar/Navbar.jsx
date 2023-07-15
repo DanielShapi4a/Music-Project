@@ -13,6 +13,7 @@ const Navbar = () => {
           <img className='MusicLogo' src={MusicLogo}></img><p className='Imagetext'>Epic Sounds</p>
         </div>
       </div>
+
       <div className='Music__navbar-sections'>
         <div className='Nav-Section2'>
           <p><a href='#home'>Music</a></p>
@@ -22,8 +23,8 @@ const Navbar = () => {
           <p><a href='#Plugins'>Plugins</a></p>
           <p><a href='#Apps'>Apps</a></p>
         </div>
-     
       </div>
+      
       <div className='Music__navbar-sections'>
           <div className='Nav-Section2'>
             <a className='Info'>Log in</a>

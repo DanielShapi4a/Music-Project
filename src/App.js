@@ -1,9 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import { Footer, Blog,Possibility,Features,Musicblog,Header } from './containers';
+import { Footer, Blog, Possibility, Features, Musicblog, Header } from './containers';
 import {CTA,Brand,Navbar} from './components';
-
+import {useState, useEffect} from 'react';
 
 function App() {
   return (
