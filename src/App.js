@@ -12,6 +12,12 @@ function App() {
         <Header/>
       </div>
       <Brand/>
+      <div>
+        <div className='Sponsors-div'></div>
+        <div className='Sponsors-div'></div>
+      </div>
+      
+
       <Musicblog/>
       <Features/>
       <Possibility/>
