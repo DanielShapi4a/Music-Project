@@ -36,6 +36,7 @@ const MyComponent = () => {
   );
 };
 
+
 const Header = () => {
   return (
     <div className='Main-Header'>
@@ -49,22 +50,7 @@ const Header = () => {
         <p>30-day free trail. Cancel anytime.</p>
       </div>
         <MyComponent/>
-
-        <div className='Showcase'>
-          <ul>
-            
-          </ul>
-          <ul>
-
-          </ul>
-    
-        </div>
-
-
-
     </div>
-
-    
   )
 }
 

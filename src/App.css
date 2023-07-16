@@ -37,6 +37,12 @@ a{
 }
 
 
+.Sponsors-div{
+  flex-direction: row;
+  flex: 1;
+  justify-content: center;
+}
+
  @-webkit-keyframes scale-up-center {
   0% {
     -webkit-transform: scale(0.5);
