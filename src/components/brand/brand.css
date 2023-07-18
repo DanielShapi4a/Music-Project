@@ -8,6 +8,7 @@ body {
   [class^="number-slide"],
   [class*=" number-slide"] {
     background: grey;
+    flex-direction: row;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,6 +17,8 @@ body {
     font-weight: 500;
     height: 350px;
     max-height: 100vh;
+    transform: translateX(calc(-100% - 2rem));
+    transition: transform 500ms linear;
   }
   
   .number-slide1 {
@@ -85,3 +88,8 @@ body {
     );
     
   }
+
+.Central-sponsor{
+  grid-area: auto;
+  
+}

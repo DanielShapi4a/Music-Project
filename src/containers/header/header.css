@@ -57,9 +57,12 @@
     margin-bottom: 40px;
 
   }
-  div.Panorama p.ChangingText {
+  .Panorama{
     font-weight: bold;
     font-size: 50px;
     color: rgb(97, 0, 253);
   }
+
+
  
+

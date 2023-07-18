@@ -49,16 +49,25 @@
     cursor: pointer;
     flex-direction: row;
 }
+.Nav-Section2 p:hover
+{
+    color: rgba(97, 0, 253, 0.874);;
+}
 .Nav-Section3{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-right: 20px;
 }
 
 .Info{
     margin-right: 10px;
     color: grey;
     font-size: 18px;
+    cursor: pointer;
+}
+.Info:hover{
+    color: #fff;
 }
 .NavBar-middle{
     justify-content: center;

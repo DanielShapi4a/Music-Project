@@ -26,7 +26,7 @@ const Navbar = () => {
       </div>
       
       <div className='Music__navbar-sections'>
-          <div className='Nav-Section2'>
+          <div className='Nav-Section3'>
             <a className='Info'>Log in</a>
             <button type='Text' className='StartFreeTrial-button'>Start free trial</button>
           </div>

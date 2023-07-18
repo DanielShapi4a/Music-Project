@@ -1,6 +1,7 @@
 import React from 'react'
 import './header.css'
 import {useState,useEffect} from 'react';
+import MovingText from 'react-moving-text'
 
 const MyComponent = () => {
   const texts = [
@@ -19,19 +20,27 @@ const MyComponent = () => {
   useEffect( () => {
     const interval = setInterval( () => {
       setCurrentIndex((prevIndex) =>(prevIndex + 1) % texts.length);
-    }, 2500);
+    }, 3000);
     return () => {
       clearInterval(interval);
     };
   }, []);
-
+  const CurentText = texts[currentIndex];
   return (
     <div className="Panorama">
       <p className='Currently'>
         Currently soundtracking more than 5 million
       </p>
-      <p className="ChangingText">{texts[currentIndex]}</p>
-      
+      <MovingText
+        type="fadeInFromBottom"
+        duration="3000ms"
+        delay="0s"
+        direction="normal"
+        timing="ease"
+        iteration=""
+        fillMode="none">
+        {CurentText}
+      </MovingText>
     </div>
   );
 };
