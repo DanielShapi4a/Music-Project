@@ -37,10 +37,39 @@ a{
 }
 
 
-.Sponsors-div{
-  flex-direction: row;
+.Central-sponsor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  object-fit: scale-down;
   flex: 1;
   justify-content: center;
+  background-color: #0000;
+}
+
+.FirstRow,
+.SecondRow {
+  display: flex;
+  justify-content: center;
+  gap: 10px; 
+  background-color: transparent;
+}
+
+.FirstRow img,
+.SecondRow img {
+  flex: 1; 
+  max-height: 200px;
+  width: 250px;
+  height: 200px;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .FirstRow img,
+  .SecondRow img {
+    flex: 0 0 100%; 
+  }
 }
 
  @-webkit-keyframes scale-up-center {
@@ -81,3 +110,4 @@ a{
     margin: 4rem 2rem;
   }
 }
+
