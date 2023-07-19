@@ -10,7 +10,7 @@ import Logo4 from "../src/assets/RazerLogo.png"
 import Logo5 from "../src/assets/SennheiserLogo.jpeg"
 import Logo6 from "../src/assets/SteelSeriesLogo.png"
 import Logo7 from "../src/assets/jabra-logo.png"
-import Logo8 from "../src/assets/samsung-logo.png"
+import Logo8 from "../src/assets/audio-technica-logo.png"
 
 function App() {
   return (
