@@ -1,49 +1,46 @@
 import React from 'react'
 import './musicblog.css'
-import MusicLogo1 from "../../assets/"
+import MusicLogo1 from "../../assets/Lofi.jpg"
+import MusicLogo2 from "../../assets/EDM.jpg"
+import MusicLogo3 from "../../assets/Pop.jpg"
+import MusicLogo4 from "../../assets/Indie.jpg"
+import MusicLogo5 from "../../assets/Trap.jpg"
+import MusicLogo6 from "../../assets/Rap.jpg"
+
 
 const Musicblog = () => {
   return (
-    <div className='TextSound'>
-      <h2 className='HeadLineText'>Authentic Music, Meaningful Influence<p className='centralText'>Collaborating with top music creators worldwide, we curate exclusive and authentic new tracks daily, just for you.</p></h2>
+    <div >
+      <div className='TextSound'>
+        <h2 className='HeadLineText'>Authentic Music, Meaningful Influence<p className='centralText'>Collaborating with top music creators worldwide, we create exclusive and authentic new tracks daily, just for you.</p></h2>
+      </div>
+
 
       <div className='MusicCatalog'>
-        <div className='MusicGenre1'>
-          <div>
-            <img></img>
-            <a>Electronic Dance</a>
-          </div>
-        </div>
-        <div className='MusicGenre2'>
-          <div>
-            <img></img>
-            <a>Pop</a>
-          </div>
-        </div>
-        <div className='MusicGenre3'>
-          <div>
-            <img></img>
-            <a>Rap</a>
-          </div>
-        </div>
-        <div className='MusicGenre4'>
-          <div>
-            <img></img>
-            <a>Lofi</a>
-          </div>
-        </div>
-        <div className='MusicGenre5'>
-          <div>
-            <img></img>
-            <a>Indie</a>
-          </div>
-        </div>
-        <div className='MusicGenre6'>
-          <div>
-            <img></img>
-            <a>Trap</a>
-          </div>
-        </div>
+        <a className='MusicGenre1'>
+          <img src={MusicLogo1} alt='Lofi' />
+          Lofi
+        </a>
+        <a className='MusicGenre2'>
+          <img src={MusicLogo2} alt='Electronic Dance' />
+          Electronic Dance
+        </a>
+        <a className='MusicGenre3'>
+          <img src={MusicLogo3} alt='Pop' />
+          Pop
+        </a>
+        <a className='MusicGenre4'>
+          <img src={MusicLogo4} alt='Indie' />
+          Indie
+        </a>
+        <a className='MusicGenre5'>
+          <img src={MusicLogo5} alt='Trap' />
+          Trap
+        </a>
+        <a className='MusicGenre6'>
+          <img src={MusicLogo6} alt='Rap' />
+          Rap
+        </a>
       </div>
 
     </div>
