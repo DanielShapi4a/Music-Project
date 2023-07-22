@@ -31,7 +31,7 @@ const Musicblog = () => {
     <div>
       <div className='TextSound'>
         <h2 className='HeadLineText'>Authentic Music, Meaningful Influence<p className='centralText'>Collaborating with top music creators worldwide, we create exclusive and authentic new tracks daily, just for you.</p></h2>
-        <p>Try one of our many genre &#x1F604;</p>
+        <p>Try one of our many genres &#x1F604;</p>
       </div>
 
       <div className='MusicCatalog'>
