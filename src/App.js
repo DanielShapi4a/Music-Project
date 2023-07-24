@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
-import { Footer, Blog, Possibility, Features, Musicblog, Header } from './containers';
-import {CTA,Brand,Navbar} from './components';
+import {Musicblog, Header} from './containers';
+import {Brand, Navbar} from './components';
 import {useState, useEffect} from 'react';
 import Logo1 from "../src/assets/HyperXLogo.png"
 import Logo2 from "../src/assets/JBL-Logo.png"
@@ -36,11 +36,6 @@ function App() {
       </div>
 
       <Musicblog/>
-      <Features/>
-      <Possibility/>
-      <CTA/>
-      <Blog/>
-      <Footer/>
     </div>
   );
 }

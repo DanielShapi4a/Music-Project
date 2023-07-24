@@ -127,3 +127,175 @@
     box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
 }
 
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .Music__navbar-sections {
+    display: none;
+  }
+
+  .Music__navbar-sections.Nav-Section2 {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .Music__navbar-sections.Nav-Section2 p {
+    margin-bottom: 10px;
+  }
+
+  .Music__navbar-sections.Nav-Section2 a {
+    color: #333;
+  }
+
+  .Music__navbar-sections.Nav-Section3 {
+    display: none;
+  }
+
+  .Music__navbar-sections.Nav-Section1 {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .Music__navbar-sections.Nav-Section1 .Imagetext {
+    display: none;
+  }
+}
+
+/* Additional styles for larger screens */
+@media (min-width: 769px) {
+  .Music__navbar-sections.Nav-Section2 {
+    display: flex;
+  }
+
+  .Music__navbar-sections.Nav-Section2 a {
+    margin-right: 20px;
+  }
+
+  .Music__navbar-sections.Nav-Section1 .MusicLogo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .Music__navbar-sections.Nav-Section1 .Imagetext {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .Music__navbar-sections.Nav-Section3 {
+    display: flex;
+    align-items: center;
+  }
+
+  .Music__navbar-sections.Nav-Section3 .Info {
+    margin-right: 20px;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .Music__navbar-sections.Nav-Section3 .StartFreeTrial-button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 768px) {
+    .Music__navbar-sections {
+      display: none;
+    }
+  
+    .Music__navbar-sections.Nav-Section2 {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      width: 100%;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+  
+    .Music__navbar-sections.Nav-Section2 p {
+      margin-bottom: 10px;
+    }
+  
+    .Music__navbar-sections.Nav-Section2 a {
+      color: #333;
+    }
+  
+    .Music__navbar-sections.Nav-Section3 {
+      display: none;
+    }
+  
+    .Music__navbar-sections.Nav-Section1 {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+  
+    .Music__navbar-sections.Nav-Section1 .Imagetext {
+      display: none;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .Music__navbar-sections.Nav-Section2 {
+      display: flex;
+    }
+  
+    .Music__navbar-sections.Nav-Section2 a {
+      margin-right: 20px;
+    }
+  
+    .Music__navbar-sections.Nav-Section1 .MusicLogo {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+  
+    .Music__navbar-sections.Nav-Section1 .Imagetext {
+      display: block;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+    }
+  
+    .Music__navbar-sections.Nav-Section3 {
+      display: flex;
+      align-items: center;
+    }
+  
+    .Music__navbar-sections.Nav-Section3 .Info {
+      margin-right: 20px;
+      color: #fff;
+      font-weight: bold;
+    }
+  
+    .Music__navbar-sections.Nav-Section3 .StartFreeTrial-button {
+      padding: 10px 20px;
+      background-color: #fff;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+  

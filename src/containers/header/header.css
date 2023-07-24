@@ -63,6 +63,43 @@
     color: rgb(97, 0, 253);
   }
 
-
+  @media (max-width: 768px) {
+    .Main-Header {
+      padding: 40px;
+      font-size: 36px;
+      line-height: 4rem;
+    }
+  
+    .Main-Header p {
+      font-size: 24px;
+      line-height: 1.8rem;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  
+    .button-container {
+      flex-direction: column;
+    }
+  
+    .ReadMore {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+  
+    .main-text {
+      margin-bottom: 150px;
+    }
+  
+    p.Currently {
+      font-size: 50px;
+      line-height: 4rem;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  
+    .Panorama {
+      font-size: 36px;
+    }
+  }
  
 

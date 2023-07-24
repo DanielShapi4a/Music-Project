@@ -7,24 +7,41 @@ import MusicLogo4 from "../../assets/Indie.jpg"
 import MusicLogo5 from "../../assets/Trap.jpg"
 import MusicLogo6 from "../../assets/Rap.jpg"
 
-
-
 import { useState, useRef } from 'react';
+
+const genres = [
+  { name: 'Lofi', startTime: 12 },
+  { name: 'Electronic Dance', startTime: 3 },
+  { name: 'Pop', startTime: 0 },
+  { name: 'Indie', startTime: 0 },
+  { name: 'Trap', startTime: 46 },
+  { name: 'Rap', startTime: 89 },
+];
 
 const Musicblog = () => {
   const [currentGenre, setCurrentGenre] = useState(null);
   const audioRef = useRef(null);
 
   const playMusic = (genre, startTime) => {
-    if (audioRef.current) {
-      audioRef.current.pause();
-      audioRef.current.currentTime = startTime;
+    if (audioRef.current && currentGenre === genre) {
+      // If the same genre is clicked and the audio is currently playing, pause it
+      if (!audioRef.current.paused) {
+        audioRef.current.pause();
+      } else {
+        // If the audio is paused, play it from the paused time
+        audioRef.current.play();
+      }
+    } else {
+      // If a different genre is clicked or the audio is paused, play it from the beginning
+      if (audioRef.current) {
+        audioRef.current.pause();
+      }
+      const audioElement = new Audio(`${process.env.PUBLIC_URL}/music-samples/${genre}.mp3`);
+      audioElement.currentTime = startTime;
+      audioElement.play();
+      setCurrentGenre(genre);
+      audioRef.current = audioElement;
     }
-    const audioElement = new Audio(`${process.env.PUBLIC_URL}/music-samples/${genre}.mp3`);
-    audioElement.currentTime = startTime;
-    audioElement.play();
-    setCurrentGenre(genre);
-    audioRef.current = audioElement;
   };
 
   return (
