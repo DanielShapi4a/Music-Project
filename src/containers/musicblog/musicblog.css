@@ -43,7 +43,10 @@
   text-decoration: none;
   color: #fff;
   border-radius: 20px;
+  flex-shrink: 0;
+  max-width: 200px;
 }
+
 
 .MusicCatalog img {
   width: 150px; 
@@ -52,6 +55,7 @@
   border-radius: 50%; 
   margin-bottom: 8px; 
   transition: filter 0.3s ease-in-out; 
+  flex-shrink: 0;
 }
 .MusicCatalog img:hover {
   cursor: pointer;
@@ -81,16 +85,21 @@
 
 }
 
-@media screen and (min-width: 768px) {
-  .MusicCatalog img {
-    width: 150px; 
-    height: 150px; 
+@media (max-width: 768px) {
+  .MusicCatalog {
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+  }
+
+  .MusicCatalog a {
+    flex-basis: calc(50% - 20px); 
+    margin-bottom: 20px; 
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .MusicCatalog img {
-    width: 200px; 
-    height: 200px; 
+@media (max-width: 480px) {
+  .MusicCatalog a {
+    flex-basis: calc(100% - 20px); 
   }
 }
