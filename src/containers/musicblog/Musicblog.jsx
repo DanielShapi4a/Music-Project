@@ -1,21 +1,20 @@
-import React from 'react'
-import './musicblog.css'
-import MusicLogo1 from "../../assets/Lofi.jpg"
-import MusicLogo2 from "../../assets/EDM.jpg"
-import MusicLogo3 from "../../assets/Pop.jpg"
-import MusicLogo4 from "../../assets/Indie.jpg"
-import MusicLogo5 from "../../assets/Trap.jpg"
-import MusicLogo6 from "../../assets/Rap.jpg"
-
-import { useState, useRef } from 'react';
+import React, { useState, useRef } from 'react';
+import './musicblog.css';
+import MusicLogo1 from "../../assets/Lofi.jpg";
+import MusicLogo2 from "../../assets/EDM.jpg";
+import MusicLogo3 from "../../assets/Pop.jpg";
+import MusicLogo4 from "../../assets/Indie.jpg";
+import MusicLogo5 from "../../assets/Trap.jpg";
+import MusicLogo6 from "../../assets/Rap.jpg";
+import GenreCard from './GenreCard';
 
 const genres = [
-  { name: 'Lofi', startTime: 12 },
-  { name: 'Electronic Dance', startTime: 3 },
-  { name: 'Pop', startTime: 0 },
-  { name: 'Indie', startTime: 0 },
-  { name: 'Trap', startTime: 46 },
-  { name: 'Rap', startTime: 89 },
+  { name: 'Lofi', startTime: 12, logoSrc: MusicLogo1 },
+  { name: 'Electronic Dance', startTime: 3, logoSrc: MusicLogo2 },
+  { name: 'Pop', startTime: 0, logoSrc: MusicLogo3 },
+  { name: 'Indie', startTime: 0, logoSrc: MusicLogo4 },
+  { name: 'Trap', startTime: 46, logoSrc: MusicLogo5 },
+  { name: 'Rap', startTime: 89, logoSrc: MusicLogo6 },
 ];
 
 const Musicblog = () => {
@@ -52,33 +51,18 @@ const Musicblog = () => {
       </div>
 
       <div className='MusicCatalog'>
-        <a className='MusicGenre1'>
-          <img src={MusicLogo1} alt='Lofi' onClick={() => playMusic('Lofi', 12)}/>
-          Lofi
-        </a>
-        <a className='MusicGenre2'>
-          <img src={MusicLogo2} alt='Electronic Dance' onClick={() => playMusic('Electronic Dance', 3)}/>
-          Electronic Dance
-        </a>
-        <a className='MusicGenre3'>
-          <img src={MusicLogo3} alt='Pop' onClick={() => playMusic('Pop', 0)}/>
-          Pop
-        </a>
-        <a className='MusicGenre4'>
-          <img src={MusicLogo4} alt='Indie' onClick={() => playMusic('Indie', 0)} />
-          Indie
-        </a>
-        <a className='MusicGenre5'>
-          <img src={MusicLogo5} alt='Trap' onClick={() => playMusic('Trap', 46)}/>
-          Trap
-        </a>
-        <a className='MusicGenre6'>
-          <img src={MusicLogo6} alt='Rap' onClick={() => playMusic('Rap', 89)}/>
-          Rap
-        </a>
+        {genres.map((genre) => (
+          <GenreCard
+            key={genre.name}
+            genreName={genre.name}
+            logoSrc={genre.logoSrc}
+            startTime={genre.startTime}
+            onClick={playMusic}
+          />
+        ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Musicblog;

@@ -4,6 +4,7 @@ import { RiMenu3Line, RiColseLin } from 'react-icons/ri';
 import MusicLogo from '../../assets/MusicLogo.png';
 import { signInWithGoogle } from './auth'; 
 import firebase from './firebaseConfig'; 
+import { Link } from 'react-router-dom';
 
 const Logo = () => (
   <div className='Nav-Section1'>
@@ -16,9 +17,9 @@ const NavLinks = ({ links, scrollToBottom }) => (
   <div className='Nav-Section2'>
     {links.map((link) => (
       <p key={link.id}>
-        <a href={`#${link.id}`} onClick={scrollToBottom}>
+        <Link to={`/${link.id}`} onClick={scrollToBottom}>
           {link.label}
-        </a>
+        </Link>
       </p>
     ))}
   </div>
@@ -50,7 +51,7 @@ const Navbar = () => {
   return (
     <div className='Music__navbar'>
       <Logo />
-      <NavLinks links={navLinks} scrollToBottom={scrollToBottom} />
+      <NavLinks links={navLinks} scrollToBottom={scrollToBottom} /> 
       <UserActions />
     </div>
   );
