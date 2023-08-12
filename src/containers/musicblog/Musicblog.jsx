@@ -37,6 +37,7 @@ const Musicblog = () => {
       }
       const audioElement = new Audio(`${process.env.PUBLIC_URL}/music-samples/${genre}.mp3`);
       audioElement.currentTime = startTime;
+      audioElement.volume = 0.15;
       audioElement.play();
       setCurrentGenre(genre);
       audioRef.current = audioElement;
