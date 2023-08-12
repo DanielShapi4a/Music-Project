@@ -1,38 +1,59 @@
-import React from 'react'
-import './navbar.css'
-import {RiMenu3Line, RiColseLin} from 'react-icons/ri';
-import MusicLogo from '../../assets/MusicLogo.png'
+import React from 'react';
+import './navbar.css';
+import { RiMenu3Line, RiColseLin } from 'react-icons/ri';
+import MusicLogo from '../../assets/MusicLogo.png';
+import { signInWithGoogle } from './auth'; 
+import firebase from './firebaseConfig'; 
 
+const Logo = () => (
+  <div className='Nav-Section1'>
+    <img className='MusicLogo' src={MusicLogo} alt='Music Logo' />
+    <p className='Imagetext'>Epic Sounds</p>
+  </div>
+);
 
+const NavLinks = ({ links, scrollToBottom }) => (
+  <div className='Nav-Section2'>
+    {links.map((link) => (
+      <p key={link.id}>
+        <a href={`#${link.id}`} onClick={scrollToBottom}>
+          {link.label}
+        </a>
+      </p>
+    ))}
+  </div>
+);
+
+const UserActions = () => (
+  <div className='Nav-Section3'>
+    <a className='Info'>Log in</a>
+    <button type='button' className='StartFreeTrial-button' onClick={signInWithGoogle}>
+      Start free trial
+    </button>
+  </div>
+);
 
 const Navbar = () => {
+  const scrollToBottom = () => {
+    window.scrollTo(0, document.body.scrollHeight);
+  };
+
+  const navLinks = [
+    { id: 'home', label: 'Music' },
+    { id: 'SFX', label: 'SFX' },
+    { id: 'Footage', label: 'Footage' },
+    { id: 'Templates', label: 'Templates' },
+    { id: 'Plugins', label: 'Plugins' },
+    { id: 'Apps', label: 'Apps' },
+  ];
+
   return (
     <div className='Music__navbar'>
-      <div className='Music__navbar-sections'>
-        <div className='Nav-Section1'>
-          <img className='MusicLogo' src={MusicLogo}></img><p className='Imagetext'>Epic Sounds</p>
-        </div>
-      </div>
-
-      <div className='Music__navbar-sections'>
-        <div className='Nav-Section2'>
-          <p><a href='#home'>Music</a></p>
-          <p><a href='#SFX'>SFX</a></p>
-          <p><a href='#Footage'>Footage</a></p>
-          <p><a href='#Templates'>Templates</a></p>
-          <p><a href='#Plugins'>Plugins</a></p>
-          <p><a href='#Apps'>Apps</a></p>
-        </div>
-      </div>
-      
-      <div className='Music__navbar-sections'>
-          <div className='Nav-Section3'>
-            <a className='Info'>Log in</a>
-            <button type='Text' className='StartFreeTrial-button'>Start free trial</button>
-          </div>
-      </div>
+      <Logo />
+      <NavLinks links={navLinks} scrollToBottom={scrollToBottom} />
+      <UserActions />
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

@@ -78,7 +78,6 @@
 .MusicLogo{
     object-fit: cover;
     background-color: transparent;
-    flex:1;
     border-radius:20px;
     height: 45px;
     width: 45px;
