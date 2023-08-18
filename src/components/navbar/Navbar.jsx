@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './navbar.css';
-import { RiMenu3Line, RiColseLin } from 'react-icons/ri';
 import MusicLogo from '../../assets/MusicLogo.png';
-import { signInWithGoogle } from './auth'; 
-import firebase from './firebaseConfig'; 
 import { Link } from 'react-router-dom';
+import { auth, provider } from '../../config/firebase.ts';
+import { signInWithPopup, signOut, onAuthStateChanged } from 'firebase/auth';
 
 const Logo = () => (
   <div className='Nav-Section1'>
@@ -25,18 +24,49 @@ const NavLinks = ({ links, scrollToBottom }) => (
   </div>
 );
 
-const UserActions = () => (
+const UserActions = ({ user, onLoginClick, onLogoutClick }) => (
   <div className='Nav-Section3'>
-    <a className='Info'>Log in</a>
-    <button type='button' className='StartFreeTrial-button' onClick={signInWithGoogle}>
-      Start free trial
-    </button>
+    {user ? (
+      <div className='UserContainer'>
+        <div className='UserPhotoContainer'>
+          <img src={user.photoURL} alt='User' className='UserPhoto' />
+        </div>
+        <span className='UserName'>{user.displayName}</span>
+        <button type='button' className='Logout-button' onClick={onLogoutClick}>
+          Logout
+        </button>
+      </div>
+    ) : (
+      <button type='button' className='StartFreeTrial-button' onClick={onLoginClick}>
+        Login Here
+      </button>
+    )}
   </div>
 );
 
 const Navbar = () => {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setUser(user);
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, []);
+
   const scrollToBottom = () => {
     window.scrollTo(0, document.body.scrollHeight);
+  };
+
+  const handleLoginClick = () => {
+    signInWithPopup(auth, provider);
+  };
+
+  const handleLogoutClick = () => {
+    signOut(auth);
   };
 
   const navLinks = [
@@ -51,8 +81,8 @@ const Navbar = () => {
   return (
     <div className='Music__navbar'>
       <Logo />
-      <NavLinks links={navLinks} scrollToBottom={scrollToBottom} /> 
-      <UserActions />
+      <NavLinks links={navLinks} scrollToBottom={scrollToBottom} />
+      <UserActions user={user} onLoginClick={handleLoginClick} onLogoutClick={handleLogoutClick} />
     </div>
   );
 };
