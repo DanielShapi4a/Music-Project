@@ -9,10 +9,16 @@
   flex: 1;
   display: flex;
   align-items: center;
-  width: 300px 3fr 2fr;
   justify-content: space-between;
   height: 75px;
   color: #fff;
+  position: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: linear-gradient(347deg, rgba(40, 40, 39, 1) 0%, rgba(60, 27, 120, 1) 100%);
 }
 
 .Music__navbar-sections {
@@ -33,7 +39,7 @@
 }
 
 .Nav-Section1 {
-  font-size: 36px;
+  font-size: 25px;
   font-family: var(--font-family);
   color: #fff;
   margin: 0 1rem;
@@ -85,6 +91,21 @@
   justify-content: space-between;
 }
 
+.LogoLink {
+  display: inline-block;
+}
+
+.LogoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.Imagetext {
+  font-size: 25px;
+  font-family: var(--font-family);
+  color: #fff;
+  cursor: pointer;
+}
 .MusicLogo {
   object-fit: cover;
   background-color: transparent;

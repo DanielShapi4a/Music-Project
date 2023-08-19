@@ -5,20 +5,28 @@ import { Link } from 'react-router-dom';
 import { auth, provider } from '../../config/firebase.ts';
 import { signInWithPopup, signOut, onAuthStateChanged } from 'firebase/auth';
 
-const Logo = () => (
+export const Logo = () => (
   <div className='Nav-Section1'>
-    <img className='MusicLogo' src={MusicLogo} alt='Music Logo' />
-    <p className='Imagetext'>Epic Sounds</p>
+    <Link to='/' className='LogoLink'>
+      <div className='LogoContainer'>
+        <img className='MusicLogo' src={MusicLogo} alt='Music Logo' />
+        <p className='Imagetext'>Epic Sounds</p>
+      </div>
+    </Link>
   </div>
 );
 
-const NavLinks = ({ links, scrollToBottom }) => (
+export const NavLinks = ({ links, scrollToBottom }) => (
   <div className='Nav-Section2'>
     {links.map((link) => (
       <p key={link.id}>
-        <Link to={`/${link.id}`} onClick={scrollToBottom}>
-          {link.label}
-        </Link>
+        {link.id === 'home' ? ( // Check if it's the "Music" link
+          <Link to='/library'>{link.label}</Link> // Navigate to the LibraryPage
+        ) : (
+          <Link to={`/${link.id}`} onClick={scrollToBottom}>
+            {link.label}
+          </Link>
+        )}
       </p>
     ))}
   </div>
