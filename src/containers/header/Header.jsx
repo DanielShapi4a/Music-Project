@@ -54,7 +54,7 @@ const Header = () => {
         <p>Whatever the mood, scene or audience, our catalog of music and sound effects takes your content from memorable to unforgettable.</p>
         <div className="button-container">
             <button type='Text' className='StartFreeTrial-button'>Start free trial</button>
-            <button className='ReadMore'>Read more</button>
+            <button type='Text' className='ReadMore'>Read more</button>
         </div>
         <p>30-day free trail. Cancel anytime.</p>
       </div>
