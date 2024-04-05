@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home'; 
-import Library from './Pages/LibraryPage';
+import Library from './Pages/LibraryPage/LibraryPage';
+
 
 function App() {
   return (
