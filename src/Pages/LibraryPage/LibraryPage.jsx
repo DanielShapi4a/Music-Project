@@ -7,9 +7,6 @@ import SongCard from '../../components/songcard/SongCard';
 import { fetchSongs } from '../../api/songApi';
 import './LibraryPage.css';
 
-const REACT_APP_CLIENT_ID = "d877231df99140ea81312c01b3c864d5";
-const REACT_APP_CLIENT_SECRET = "182854809bb1448593d274a05e19caf8";
-
 const LibraryPage = () => {
   const [songs, setSongs] = useState([]);
   const [loading, setLoading] = useState(true);
