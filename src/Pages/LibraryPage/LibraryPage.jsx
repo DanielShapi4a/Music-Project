@@ -7,7 +7,6 @@ import SongCard from '../../components/songcard/SongCard';
 import { fetchSongs } from '../../api/songApi';
 import './LibraryPage.css';
 
-
 const LibraryPage = () => {
   const [songs, setSongs] = useState([]);
   const [loading, setLoading] = useState(true);
