@@ -7,6 +7,9 @@ import SongCard from '../../components/songcard/SongCard';
 import { fetchSongs } from '../../api/songApi';
 import './LibraryPage.css';
 
+const clientID = process.env.REACT_APP_CLIENT_ID;
+const clientSecret = process.env.REACT_APP_CLIENT_SECRET;
+
 const LibraryPage = () => {
   const [songs, setSongs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -36,7 +39,7 @@ const LibraryPage = () => {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
-      body: 'grant_type=client_credentials&client_id=' + REACT_APP_CLIENT_ID + '&client_secret=' + REACT_APP_CLIENT_SECRET
+      body: 'grant_type=client_credentials&client_id=' + clientID + '&client_secret=' + clientSecret
     };
 
     fetch('https://accounts.spotify.com/api/token', authParameters)
